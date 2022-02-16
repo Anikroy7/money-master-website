@@ -1,5 +1,8 @@
+
+  /* for main section */
+
 .main-image{
-    width: 470px;
+    width: 500px;
     height: 500px;
 }
 .input-background{
@@ -10,6 +13,8 @@
     background-color: rgba(226, 226, 226, 0.288);
     border-radius: 2px;
 }
+
+/*  for error handeling */
 .notify{
     position: absolute;
     top: 250px;
