@@ -13,24 +13,40 @@ document.getElementById('calculate-button').addEventListener('click', function (
     totalExpenses.innerText = totalExpensesAmount;
     let totalBalanceAmount = totalIncome - totalExpensesAmount;
 
-    let totalBalance = document.getElementById("total-balance");
+    //-------- error massage  added
 
-    totalBalance.innerText = totalBalanceAmount;
+    if (totalIncome < totalExpensesAmount) {
+
+        alert('Your expense is more than your income');
+
+    }
+    else {
+
+        let totalBalance = document.getElementById("total-balance");
+
+        totalBalance.innerText = totalBalanceAmount;
+    }
+
 });
+
+//------------------------- input function
+
 function getInputValue(inputId) {
     let inputField = document.getElementById(inputId);
     let inputNumberText = inputField.value;
     let inputNumber = parseFloat(inputNumberText);
+
+    // error massage added
     if (isNaN(inputNumber) || inputNumber < 0) {
-        alert('Please input a valid number');
+        let errorId = document.getElementById('invalid');
+        errorId.style.display = 'block';
     }
     else {
         return inputNumber;
     }
-
 }
 
-// --------------  bonous section start
+// --------------  bonous section start for saving amount section
 
 document.getElementById('save-button').addEventListener('click', function () {
     let totalIncome = getInputValue('income-input');
@@ -41,7 +57,16 @@ document.getElementById('save-button').addEventListener('click', function () {
     let totalBalanceAmountText = document.getElementById('total-balance').innerText;
     let totalBalanceAmount = parseFloat(totalBalanceAmountText);
     let remainingBalance = totalBalanceAmount - savingAmount;
-    let remainingBalanceId = document.getElementById('remaining-balance');
-    remainingBalanceId.innerText = remainingBalance;
+
+    //      error massage added
+
+    if (totalBalanceAmount < savingAmount) {
+        alert('Your saving amount is more than total balance');
+    }
+    else {
+
+        let remainingBalanceId = document.getElementById('remaining-balance');
+        remainingBalanceId.innerText = remainingBalance;
+    }
 
 });

@@ -10,3 +10,14 @@
     background-color: rgba(226, 226, 226, 0.288);
     border-radius: 2px;
 }
+.notify{
+    position: absolute;
+    top: 250px;
+    left: 400px;
+    color: antiquewhite;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(253, 13, 13);
+    display: none;
+}
+
