@@ -1,0 +1,12 @@
+.main-image{
+    width: 470px;
+    height: 500px;
+}
+.input-background{
+    background-color: rgba(209, 209, 209, 0.616);
+    border-radius: 2px;
+}
+.calculate-section-background{
+    background-color: rgba(226, 226, 226, 0.288);
+    border-radius: 2px;
+}
